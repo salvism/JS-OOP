@@ -43,19 +43,20 @@ console.log(CheckStr(str));
 /* TASK 3
 Elə bir metod yazın ki parametr olaraq cümlə qəbul eləsin
 və həmin cümlədə sözlərin sayını tapan alqoritm yazın. */
-let sentenceStr = "My name is Salvi.";
+let sentenceStr = "  My name is Salvi.  ";
 let count = 1;
+let newSent = sentenceStr.trim();
 
-function CountWords(sentenceStr) {
-  for (let index = 0; index < sentenceStr.length; index++) {
-    if (sentenceStr[index] === " ") {
+function CountWords(newSent) {
+  for (let index = 0; index < newSent.length; index++) {
+    if (newSent[index] === " ") {
       count++;
     }
   }
   return count;
 }
 
-console.log(CountWords(sentenceStr));
+console.log(CountWords(newSent));
 
 // EASY WAY
 /* let sentenceArr = sentenceStr.split(" ");
