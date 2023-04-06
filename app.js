@@ -28,13 +28,17 @@ let newStr = "";
 let sortStr = function (str) {
   return str.toLowerCase().split("").sort().join("");
 };
-for (let index = 1; index < str.length; index++) {
-  if (str[index] === str[index - 1]) {
-    newStr += str[index];
+
+function CheckStr(str) {
+  for (let index = 1; index < str.length; index++) {
+    if (str[index] === str[index - 1]) {
+      newStr += str[index];
+    }
   }
+  return newStr;
 }
 
-console.log(sortStr(newStr));
+console.log(CheckStr(str));
 
 /* TASK 3
 Elə bir metod yazın ki parametr olaraq cümlə qəbul eləsin
