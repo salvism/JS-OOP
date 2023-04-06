@@ -23,17 +23,15 @@ console.log(CheckArr(array));
 Elə bir metod yazın ki parametr olaraq string qəbul eləsin.
 və əgər stringin içərisində eyni hərf varsa eyni olanları consolda göstərsin */
 let str = "Harry Potter";
-let check = str[0];
 let newStr = "";
 
 let sortStr = function (str) {
   return str.toLowerCase().split("").sort().join("");
 };
 for (let index = 1; index < str.length; index++) {
-  if (str[index] === check) {
+  if (str[index] === str[index - 1]) {
     newStr += str[index];
   }
-  check = str[index];
 }
 
 console.log(sortStr(newStr));
